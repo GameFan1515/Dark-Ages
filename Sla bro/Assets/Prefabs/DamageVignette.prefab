@@ -147,7 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3394947095356428955}
   m_Layer: 0
-  m_Name: DamageTake
+  m_Name: DamageVignette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

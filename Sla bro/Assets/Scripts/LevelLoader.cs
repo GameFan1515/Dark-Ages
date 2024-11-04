@@ -21,7 +21,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadEspecificLevel(int levelindex)
     {
-        StartCoroutine(LoadLevel(levelindex));
+        StartCoroutine(LoadLevel(levelindex)); //Roda o Método LoadLevel que é Utilizado no Script "EspecificLevelCollisionTrigger" Pra Escolher pra Qual Cena Vai (lembrar Sempre de usar StartCoroutine ao Acessar um Método do Mesmo)
     }
 
     IEnumerator LoadLevel(int levelIndex) //Utilizado pra quando Precisamos que o Código tenha um Delay antes de Rodar (Coroutine)
