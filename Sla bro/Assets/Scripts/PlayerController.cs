@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody2D playerRB;
     Animator animator;
     private string currentState;
+    public string PlayerSide;
 
     Vector2 movement;
 
@@ -15,7 +17,7 @@ public class PlayerController : MonoBehaviour
     const string Player_Idle_Front = "Player_Idle_Front";
     const string Player_Idle_Left = "Player_Idle_Left";
     const string Player_Idle_Right = "Player_Idle_Right";
-    
+
     const string Player_Walk_Front = "Player_Walk_Front";
     const string Player_Walk_Back = "Player_Walk_Back";
     const string Player_Walk_Left = "Player_Walk_Left";
@@ -26,6 +28,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        ChangeAnimationState(PlayerSide);
     }
 
     // Update is called once per frame
@@ -39,11 +42,10 @@ public class PlayerController : MonoBehaviour
     {
         playerRB.MovePosition(playerRB.position + movement * speed * Time.deltaTime);
         CharIsWalking();
-        
+
     }
 
-
-    private void CharIsWalking() 
+    private void CharIsWalking()
     {
         if (movement.magnitude > 0) //Verifica se o Player está se Mexendo, e é uma Boa Forma de Rodar as Animações Certas quando se Anda pras Diagonais.
         {
@@ -72,7 +74,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (currentState == Player_Walk_Right) //Se o Player Estiver Parado mas sua Animação atual for "Andando pra Direita"
             {
-                ChangeAnimationState (Player_Idle_Right);
+                ChangeAnimationState(Player_Idle_Right);
             }
             else if (currentState == Player_Walk_Back) //Se o Player Estiver Parado mas sua Animação atual for "Andando pra Tras"
             {
@@ -85,7 +87,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-   
+
     void ChangeAnimationState(string newState)
     {
         //Impede a Animação de Interromper ela Mesma
@@ -97,4 +99,5 @@ public class PlayerController : MonoBehaviour
         //Reatribui o Estado Atual
         currentState = newState;
     }
+
 }
