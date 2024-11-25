@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf9befa7d308cb4e8fd68808eb3e35e, type: 3}
   m_Name: GameState
   m_EditorClassIdentifier: 
-  LastSpawnPoint: Door_Spawn
-  NextSpawnPoint: RightSide
+  LastSpawnPoint: 
+  NextSpawnPoint: Door_Spawn

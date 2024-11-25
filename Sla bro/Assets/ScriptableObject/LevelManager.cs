@@ -8,12 +8,12 @@ public class LevelManager : MonoBehaviour
    
     void Start()
     {
+        
         // Se NextSpawnPoint estiver vazio ou nulo, define como Bed_Spawn
         if (string.IsNullOrEmpty(gameState.NextSpawnPoint))
         {
             gameState.NextSpawnPoint = "Bed_Spawn"; // Define o spawn inicial
         }
-
         // Verifica o próximo ponto de spawn definido no GameState
         string spawnPointName = gameState.NextSpawnPoint;
 
