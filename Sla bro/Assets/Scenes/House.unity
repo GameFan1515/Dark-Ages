@@ -5276,6 +5276,10 @@ PrefabInstance:
       propertyPath: PlayerSide
       value: Player_Idle_Left
       objectReference: {fileID: 0}
+    - target: {fileID: 5940302271267570483, guid: 74de8d18b7d3e5b42b1d8a23584bcdcb, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
