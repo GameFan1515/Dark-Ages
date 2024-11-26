@@ -7017,7 +7017,7 @@ MonoBehaviour:
   lines:
   - You are Really Gay
   - My Old Friend
-  textSpeed: 0.3
+  textSpeed: 0.1
 --- !u!1 &1878859142
 GameObject:
   m_ObjectHideFlags: 0
