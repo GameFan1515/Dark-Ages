@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GameState
   m_EditorClassIdentifier: 
   LastSpawnPoint: 
-  NextSpawnPoint: Door_Spawn
+  NextSpawnPoint: Bed_Spawn
