@@ -1,52 +1,50 @@
-using TMPro;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class InteractionSystem : MonoBehaviour
 {
     public GameObject e;
-    public GameObject Player;
+    public Dialogue dialogue;
+
     private bool isColliding;
-    public Dialogue Dialogue;
-    public TextMeshProUGUI Text;
+
     private void Start()
     {
-        Dialogue.gameObject.SetActive(false);
-        e.SetActive(false);
+        e.SetActive(false); // Indicador de interação desativado inicialmente
     }
 
     private void Update()
     {
         if (isColliding && Input.GetKeyDown(KeyCode.E))
         {
-            if (Dialogue.DialogueFinished)
+            if (dialogue.IsDialogueFinished)
             {
-
-                Dialogue.StartDialogue();
-                Dialogue.textComponent.text = string.Empty;
+                dialogue.StartDialogue(); // Inicia o diálogo
             }
-
+            else
+            {
+                dialogue.NextLine(); // Avança para a próxima linha
+            }
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-      if (collision.CompareTag ("Mail"))
+        if (collision.CompareTag("Mail"))
         {
-            e.SetActive(true);
+            e.SetActive(true); // Mostra o indicador de interação
             isColliding = true;
-            Debug.Log("Player is Colliding");
-
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Mail"))
         {
-            e.SetActive(false);
+
+            e.SetActive(false); // Esconde o indicador de interação
+            dialogue.gameObject.SetActive(false);
             isColliding = false;
             
-            Debug.Log("Player is not Colliding");
-
         }
     }
 }

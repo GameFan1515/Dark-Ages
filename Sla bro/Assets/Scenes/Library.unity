@@ -2147,6 +2147,63 @@ Transform:
   - {fileID: 239040940}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1392532728
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3488505160671032717, guid: 930cd50660d02a6419f9005af98438e6, type: 3}
+      propertyPath: m_Name
+      value: Mail
+      objectReference: {fileID: 0}
+    - target: {fileID: 8967144106512709656, guid: 930cd50660d02a6419f9005af98438e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 8967144106512709656, guid: 930cd50660d02a6419f9005af98438e6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8967144106512709656, guid: 930cd50660d02a6419f9005af98438e6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8967144106512709656, guid: 930cd50660d02a6419f9005af98438e6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.47899893
+      objectReference: {fileID: 0}
+    - target: {fileID: 8967144106512709656, guid: 930cd50660d02a6419f9005af98438e6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8967144106512709656, guid: 930cd50660d02a6419f9005af98438e6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8967144106512709656, guid: 930cd50660d02a6419f9005af98438e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.8778155
+      objectReference: {fileID: 0}
+    - target: {fileID: 8967144106512709656, guid: 930cd50660d02a6419f9005af98438e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8967144106512709656, guid: 930cd50660d02a6419f9005af98438e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8967144106512709656, guid: 930cd50660d02a6419f9005af98438e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 122.76
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 930cd50660d02a6419f9005af98438e6, type: 3}
 --- !u!1001 &1414979916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2157,15 +2214,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3599103556065468855, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
       propertyPath: lines.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3599103556065468855, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
       propertyPath: 'lines.Array.data[0]'
-      value: "Ouvi Dizer que h\xE1 uma Arma Nesta Sala"
+      value: "As Pessoas N\xE3o Tem No\xE7\xE3o"
       objectReference: {fileID: 0}
     - target: {fileID: 3599103556065468855, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
       propertyPath: 'lines.Array.data[1]'
-      value: Deve Estar Na Gaveta Do Papai
+      value: "Do Qu\xE3o Infernal Minha Madrugada Foi"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3599103556065468855, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
+      propertyPath: 'lines.Array.data[2]'
+      value: "Eu Provavelmente Vou Viver Um M\xEAs a Menos Depois de Hoje"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3599103556065468855, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
+      propertyPath: 'lines.Array.data[3]'
+      value: S.O.S
       objectReference: {fileID: 0}
     - target: {fileID: 3888871293842724023, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
       propertyPath: m_Name
@@ -2256,6 +2321,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
+--- !u!114 &1414979917 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3599103556065468855, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
+  m_PrefabInstance: {fileID: 1414979916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2928acd2cef9248bd5d103801b1eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1738909256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2308,6 +2384,10 @@ PrefabInstance:
       propertyPath: Pixel_Blood
       value: 
       objectReference: {fileID: 1917978276}
+    - target: {fileID: 2901920021404477015, guid: 74de8d18b7d3e5b42b1d8a23584bcdcb, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 1414979917}
     - target: {fileID: 4067543882760090126, guid: 74de8d18b7d3e5b42b1d8a23584bcdcb, type: 3}
       propertyPath: m_Name
       value: Player
@@ -6513,3 +6593,4 @@ SceneRoots:
   - {fileID: 529355420}
   - {fileID: 2004307107}
   - {fileID: 1414979916}
+  - {fileID: 1392532728}

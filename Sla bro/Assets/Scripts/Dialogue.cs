@@ -1,67 +1,79 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
-    public bool DialogueFinished;
 
     private int index;
+    private bool isTyping; // Flag para controlar se o texto está sendo digitado
+    private bool dialogueActive;
+
+    public bool IsDialogueFinished => !dialogueActive; // Propriedade para verificar o estado
+
     void Start()
     {
-        textComponent.text = string.Empty;
+        gameObject.SetActive(false);
+        textComponent.text = string.Empty; // Inicializa o texto vazio
     }
-    void Update()
+
+    public void StartDialogue()
     {
-        
-            if (Input.GetKeyDown(KeyCode.E)) 
-
-            {
-            if (textComponent.text == lines[index])
-            {
-                NextLine();
-            }
-
-            else
-            {
-                
-                StopAllCoroutines();
-                textComponent.text = lines[index];
-            }   
+        if (lines.Length == 0)
+        {
+            
+            Debug.LogWarning("Nenhuma linha para exibir no diálogo!");
+            return;
         }
-    }
-     public void StartDialogue()
-    {
         gameObject.SetActive(true);
-        DialogueFinished = false;
+        dialogueActive = true; // Inicia o diálogo
         index = 0;
+        textComponent.text = string.Empty;
         StartCoroutine(TypeLine());
     }
 
     IEnumerator TypeLine()
     {
+        isTyping = true;
+        textComponent.text = string.Empty;
+
         foreach (char c in lines[index].ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+
+        isTyping = false;
     }
 
-    void NextLine()
+    public void NextLine()
     {
-        if (index < lines.Length - 1)
+        if (isTyping) // Completa a linha atual se ainda está digitando
         {
+            StopAllCoroutines();
+            textComponent.text = lines[index];
+            isTyping = false;
+        }
+        else if (index < lines.Length - 1)
+        {
+            gameObject.SetActive(true);
             index++;
-            textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
-            DialogueFinished = false;
         }
         else
         {
-            DialogueFinished = true;
-            gameObject.SetActive(false);
+            EndDialogue();
         }
+    }
+
+    public void EndDialogue()
+    {
+        textComponent.text = string.Empty; // Limpa o texto
+        dialogueActive = false; // Marca o fim do diálogo
+        gameObject.SetActive(false);
+
     }
 }
