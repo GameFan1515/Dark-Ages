@@ -2147,7 +2147,7 @@ Transform:
   - {fileID: 239040940}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1640084143
+--- !u!1001 &1414979916
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -2155,25 +2155,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 917261052098127828, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
+    - target: {fileID: 3599103556065468855, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
+      propertyPath: lines.Array.size
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 917261052098127828, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -560
+    - target: {fileID: 3599103556065468855, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
+      propertyPath: 'lines.Array.data[0]'
+      value: "Ouvi Dizer que h\xE1 uma Arma Nesta Sala"
       objectReference: {fileID: 0}
-    - target: {fileID: 917261052098127828, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -920
-      objectReference: {fileID: 0}
-    - target: {fileID: 917261052098127828, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 917261052098127828, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -420
+    - target: {fileID: 3599103556065468855, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
+      propertyPath: 'lines.Array.data[1]'
+      value: Deve Estar Na Gaveta Do Papai
       objectReference: {fileID: 0}
     - target: {fileID: 3888871293842724023, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
       propertyPath: m_Name
@@ -6520,4 +6512,4 @@ SceneRoots:
   - {fileID: 947147809}
   - {fileID: 529355420}
   - {fileID: 2004307107}
-  - {fileID: 1640084143}
+  - {fileID: 1414979916}
