@@ -20,14 +20,7 @@ public class HealthSystem : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Pega a Cena Pelo Nome e a Reinicia
         }
-        if (Input.GetMouseButtonDown(0)) // Se o Botão Esquerdo do Mouse for Pressionado
-        {
-            TakeDamage(20); // Roda o Método pra Tirar 20 da Vida do Personagem
-        }
-        if (Input.GetMouseButtonDown(1)) // Se o Botão Direito do Mouse for Pressionado
-        {
-            HealDamage(20); // Roda o Método pra Curar 20 da Vida do Personagem
-        }
+       
     }
 
 
