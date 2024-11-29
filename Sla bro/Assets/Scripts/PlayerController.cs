@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody2D playerRB;
     Animator animator;
     private string currentState;
-    public string PlayerSide;
+  
+    
 
     Vector2 movement;
 
@@ -28,7 +29,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        ChangeAnimationState(PlayerSide);
+
     }
 
     // Update is called once per frame
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+     
     }
 
     private void FixedUpdate()
@@ -99,5 +101,4 @@ public class PlayerController : MonoBehaviour
         //Reatribui o Estado Atual
         currentState = newState;
     }
-
 }
