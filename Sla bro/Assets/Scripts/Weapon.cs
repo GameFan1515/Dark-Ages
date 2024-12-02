@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    public GameObject Gun;
     [SerializeField] private Transform barrel; //Posição de Onde a Bala Vai Aparecer
     [SerializeField] private float fireRate; //Cadência de Tiro
     [SerializeField] private GameObject bullet; //Projétil
+   
 
     private float fireTimer; //Controle da Cadência
 
@@ -18,6 +20,7 @@ public class Weapon : MonoBehaviour
     void Update()
     {
         HandleShooting();
+        
     }
     private void HandleShooting()
     {
@@ -39,4 +42,6 @@ public class Weapon : MonoBehaviour
     {
         return Time.time > fireTimer;
     }
+
+
 }

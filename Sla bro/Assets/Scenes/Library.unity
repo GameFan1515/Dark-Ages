@@ -2214,23 +2214,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3599103556065468855, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
       propertyPath: lines.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3599103556065468855, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
       propertyPath: 'lines.Array.data[0]'
-      value: "As Pessoas N\xE3o Tem No\xE7\xE3o"
+      value: Caso precise se defender o pai deixou "ela" em casa
       objectReference: {fileID: 0}
     - target: {fileID: 3599103556065468855, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
       propertyPath: 'lines.Array.data[1]'
-      value: "Do Qu\xE3o Infernal Minha Madrugada Foi"
+      value: "pra encontrar fa\xE7a a soma dos candelabros do corredor e as cabe\xE7as
+        de alce na casa"
       objectReference: {fileID: 0}
     - target: {fileID: 3599103556065468855, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
       propertyPath: 'lines.Array.data[2]'
-      value: "Eu Provavelmente Vou Viver Um M\xEAs a Menos Depois de Hoje"
+      value: E lembre-se, sempre da esquerda pra direita.
       objectReference: {fileID: 0}
     - target: {fileID: 3599103556065468855, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
       propertyPath: 'lines.Array.data[3]'
-      value: S.O.S
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3888871293842724023, guid: 288f65e27f5ac3d4cb791f5f6e1dc406, type: 3}
       propertyPath: m_Name
@@ -2346,7 +2347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 404769509742801240, guid: 74de8d18b7d3e5b42b1d8a23584bcdcb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.27
+      value: 3.26
       objectReference: {fileID: 0}
     - target: {fileID: 404769509742801240, guid: 74de8d18b7d3e5b42b1d8a23584bcdcb, type: 3}
       propertyPath: m_LocalPosition.z

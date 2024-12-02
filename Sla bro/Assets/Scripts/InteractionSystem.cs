@@ -4,11 +4,13 @@ public class InteractionSystem : MonoBehaviour
 {
     public GameObject e;
     public Dialogue dialogue;
+    [SerializeField] GameObject Gun;
 
     private bool isColliding;
 
     private void Start()
     {
+        
         e.SetActive(false); // Indicador de interação desativado inicialmente
     }
 
@@ -19,6 +21,7 @@ public class InteractionSystem : MonoBehaviour
             if (dialogue.IsDialogueFinished)
             {
                 dialogue.StartDialogue(); // Inicia o diálogo
+               
             }
             else
             {
@@ -27,14 +30,25 @@ public class InteractionSystem : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Mail"))
         {
             e.SetActive(true); // Mostra o indicador de interação
             isColliding = true;
         }
+
+        if (collision.gameObject.tag == "Gun")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Gun.SetActive(true);
+            }
+
+        }
     }
+
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -44,7 +58,7 @@ public class InteractionSystem : MonoBehaviour
             e.SetActive(false); // Esconde o indicador de interação
             dialogue.gameObject.SetActive(false);
             isColliding = false;
-            
+
         }
     }
 }

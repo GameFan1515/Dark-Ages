@@ -2,14 +2,22 @@ using UnityEngine;
 
 public class EnemyTakeDamage : MonoBehaviour
 {
+    [SerializeField] private bool EnemyEnable;
+    
     [SerializeField] private float MaxHealth;
     private float CurrentLife;
     [SerializeField] private float Enemydamage;
-
+    [SerializeField] GameObject Enemy;
 
     void Start()
     {
+
         CurrentLife = MaxHealth;
+    }
+
+    private void Update()
+    {
+        EnemyEnables(EnemyEnable);
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -24,7 +32,7 @@ public class EnemyTakeDamage : MonoBehaviour
             }
         }
     }
-    
+
     public void TakeDamage(float damage)
     {
         CurrentLife -= damage;
@@ -35,5 +43,16 @@ public class EnemyTakeDamage : MonoBehaviour
         }
 
     }
-    
+    private void EnemyEnables(bool EnemyEnable)
+    {
+        if (EnemyEnable)
+        {
+            Enemy.SetActive(true);
+        }
+        else
+        {
+            Enemy.SetActive(false);
+        }
+    }
+
 }

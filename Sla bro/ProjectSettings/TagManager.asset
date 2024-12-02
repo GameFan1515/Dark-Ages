@@ -8,6 +8,9 @@ TagManager:
   - E
   - Enemy
   - Bullet
+  - EnemySpawnerTrigger
+  - Gun
+  - DarkSouls
   layers:
   - Default
   - TransparentFX
