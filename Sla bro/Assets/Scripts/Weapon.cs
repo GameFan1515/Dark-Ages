@@ -21,7 +21,7 @@ public class Weapon : MonoBehaviour
     }
     private void HandleShooting()
     {
-        if (Input.GetMouseButton(0) && CanShoot())
+        if (Input.GetMouseButtonDown(0) && CanShoot())
         {
             Shoot();
         }
