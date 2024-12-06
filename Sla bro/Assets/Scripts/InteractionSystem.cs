@@ -11,7 +11,7 @@ public class InteractionSystem : MonoBehaviour
     private void Start()
     {
         
-        e.SetActive(false); // Indicador de interação desativado inicialmente
+        e.SetActive(false); 
     }
 
     private void Update()
@@ -20,12 +20,12 @@ public class InteractionSystem : MonoBehaviour
         {
             if (dialogue.IsDialogueFinished)
             {
-                dialogue.StartDialogue(); // Inicia o diálogo
+                dialogue.StartDialogue(); 
                
             }
             else
             {
-                dialogue.NextLine(); // Avança para a próxima linha
+                dialogue.NextLine(); 
             }
         }
     }
@@ -34,7 +34,7 @@ public class InteractionSystem : MonoBehaviour
     {
         if (collision.CompareTag("Mail"))
         {
-            e.SetActive(true); // Mostra o indicador de interação
+            e.SetActive(true); 
             isColliding = true;
         }
 
@@ -55,7 +55,7 @@ public class InteractionSystem : MonoBehaviour
         if (collision.CompareTag("Mail"))
         {
 
-            e.SetActive(false); // Esconde o indicador de interação
+            e.SetActive(false); 
             dialogue.gameObject.SetActive(false);
             isColliding = false;
 

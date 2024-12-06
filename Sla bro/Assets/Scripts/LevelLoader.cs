@@ -1,19 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; //Permite acessar o Scene Manager
+using UnityEngine.SceneManagement; 
 
 public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime = 1f;
-  
-
-    void Update()
-    {
-
-    }
-
     public void LoadNextLevel() //Método pra ir pra Próxima Cena
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1)); //Roda o Método LoadLevel com o Parâmetro que Identifica sua Cena Atual e Passa pra Próxima (lembrar Sempre de usar StartCoroutine ao Acessar um Método do Mesmo)

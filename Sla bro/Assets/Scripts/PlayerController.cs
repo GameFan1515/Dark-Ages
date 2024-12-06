@@ -25,14 +25,14 @@ public class PlayerController : MonoBehaviour
     const string Player_Walk_Right = "Player_Walk_Right";
 
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         animator = GetComponent<Animator>();
 
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");

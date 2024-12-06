@@ -10,8 +10,8 @@ public class EspecificLevelCollisionTrigger : MonoBehaviour
         
         if (collision.CompareTag("Player"))
         {
-            LevelLoader loader = FindObjectOfType<LevelLoader>(); //Procura em todos os Objetos o Script levelLoader e Retorna ele como loader
-            loader.LoadEspecificLevel(levelToLoad); //Acessa e Utiliza o Método LoadNextLevel do Script
+            LevelLoader loader = FindObjectOfType<LevelLoader>();
+            loader.LoadEspecificLevel(levelToLoad); 
         }
 
     }
